@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1030 Elmwood | Luxury Living in Elmwood Village</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">1030 ELMWOOD</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">The Building</a></li>
+                    <li><a href="#amenities">Amenities</a></li>
+                    <li><a href="#floorplans">Floor Plans</a></li>
+                    <li><a href="#contact" class="btn btn-nav">Schedule a Tour</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Refined Urban Living</h1>
+            <p>Experience the perfect blend of historic character and contemporary luxury in the heart of Buffalo's Elmwood Village.</p>
+            <a href="#contact" class="btn btn-primary">Check Availability</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container grid-2">
+            <div class="about-text">
+                <span class="sub-heading">Welcome Home</span>
+                <h2>A Beautifully Reimagined Icon</h2>
+                <p>Located steps from Bidwell Parkway, 1030 Elmwood Avenue features meticulously renovated 2 and 3-bedroom residences. Every unit pairs the timeless architectural craftsmanship of 1900 with high-end modern comforts.</p>
+                <p>Enjoy open floor plans, premium energy-efficient appliances, separate utilities, and dedicated off-street parking in Buffalo's most walkable and vibrant neighborhood.</p>
+            </div>
+            <div class="about-image-placeholder">
+                <div class="img-fallback">Exterior Architecture View</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="amenities" class="section bg-light">
+        <div class="container text-center">
+            <span class="sub-heading">Features</span>
+            <h2>Curated Amenities</h2>
+            <div class="grid-3 m-top-40">
+                <div class="card">
+                    <h3>Modern Interiors</h3>
+                    <p>Gorgeous hardwood flooring, brand-new custom cabinetry, ceramic tiling, and energy-rated stainless steel appliances.</p>
+                </div>
+                <div class="card">
+                    <h3>Climate Control</h3>
+                    <p>High-efficiency central air conditioning and forced-air heating systems keeping you perfectly comfortable year-round.</p>
+                </div>
+                <div class="card">
+                    <h3>Premium Perks</h3>
+                    <p>Off-street parking spaces, beautiful new balconies, integrated fire suppression systems, and convenient laundry facilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="floorplans" class="section">
+        <div class="container">
+            <div class="text-center">
+                <span class="sub-heading">Residences</span>
+                <h2>Available Configurations</h2>
+            </div>
+            <div class="grid-2 m-top-40">
+                <div class="fp-card">
+                    <div class="fp-img-placeholder">2 Bed, 1 Bath Floor Plan</div>
+                    <div class="fp-details">
+                        <h3>The Elmwood Suite</h3>
+                        <p class="price">Starting at $1,600 / mo</p>
+                        <p>Perfect layout featuring an open-concept dining room, bay windows, and private closet space.</p>
+                    </div>
+                </div>
+                <div class="fp-card">
+                    <div class="fp-img-placeholder">3 Bed, 1 Bath Floor Plan</div>
+                    <div class="fp-details">
+                        <h3>The Bidwell Residence</h3>
+                        <p class="price">Starting at $2,000 / mo</p>
+                        <p>Spacious floor plan spanning gorgeous living layouts, private balconies, and sweeping neighborhood views.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section bg-dark text-white">
+        <div class="container grid-2">
+            <div>
+                <span class="sub-heading">Contact Us</span>
+                <h2>Schedule Your Private Showing</h2>
+                <p>Reach out to our leasing team today to check upcoming unit availability or lock in your application.</p>
+                <div class="contact-info">
+                    <p><strong>Address:</strong> 1030 Elmwood Ave, Buffalo, NY 14222</p>
+                    <p><strong>Neighborhood:</strong> Elmwood Village / Forest</p>
+                </div>
+            </div>
+            <div>
+                <form id="tourForm" class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <select required>
+                        <option value="" disabled selected>Interested in...</option>
+                        <option value="2bed">2 Bedroom Apartment</option>
+                        <option value="3bed">3 Bedroom Apartment</option>
+                    </select>
+                    <textarea placeholder="Desired Move-in Date / Message" rows="4"></textarea>
+                    <button type="submit" class="btn btn-primary btn-block">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 1030 Elmwood Residences. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
