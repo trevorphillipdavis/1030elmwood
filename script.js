@@ -13,7 +13,7 @@ document.getElementById('tourForm').addEventListener('submit', function(e) {
         }
     }).then(response => {
         if (response.ok) {
-            alert('Thank you for your message! Our leasing office will connect with you via email shortly.');
+            alert('Thank you for your message!');
             form.reset();
         } else {
             alert('Oops! There was a problem submitting your form. Please try again.');
