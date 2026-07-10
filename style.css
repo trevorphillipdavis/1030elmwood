@@ -137,10 +137,11 @@ header {
     width: 100%;
 }
 
-/* Hero */
+/* Hero Header Section */
 .hero {
     height: 90vh;
-    background: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+    /* Direct URL to your custom building image */
+    background: url('https://www.dropbox.com/scl/fi/x5x7kvwz4m0uoo463auap/IMG_3783.jpg?rlkey=fgcj8mrl9i3o9od4csgnbyyfp&raw=1') no-repeat center center/cover;
     position: relative;
     display: flex;
     align-items: center;
