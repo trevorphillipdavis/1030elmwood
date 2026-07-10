@@ -137,10 +137,10 @@ header {
     width: 100%;
 }
 
-/* Hero Header Section - Reverted to Clean Original Layout Mode */
+/* Hero Header Section - Updated to local Root File Path */
 .hero {
     height: 90vh;
-    background: url('https://www.dropbox.com/scl/fi/x5x7kvwz4m0uoo463auap/IMG_3783.jpg?rlkey=fgcj8mrl9i3o9od4csgnbyyfp&raw=1') no-repeat center center/cover;
+    background: url('Front_Header.jpg') no-repeat center center/cover;
     position: relative;
     display: flex;
     align-items: center;
@@ -152,7 +152,7 @@ header {
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(28, 45, 55, 0.55); /* Provides balanced text contrast overlay */
+    background: rgba(28, 45, 55, 0.55);
 }
 
 .hero-content {
