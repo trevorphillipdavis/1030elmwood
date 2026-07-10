@@ -137,7 +137,7 @@ header {
     width: 100%;
 }
 
-/* Hero Header Section - Updated to local Root File Path */
+/* Hero Header Section */
 .hero {
     height: 90vh;
     background: url('Front_Header.jpg') no-repeat center center/cover;
@@ -263,6 +263,21 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Massive Contact Text Modification */
+#contact {
+    align-items: center;
+}
+
+#contact .sub-heading {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 6vw, 4.5rem); /* Fluid scaling based on window width */
+    line-height: 1.1;
+    font-weight: 400;
+    letter-spacing: 4px;
+    word-spacing: 100vw; /* Forces "CONTACT" and "US" to stack elegantly on separate lines */
+    margin-bottom: 0;
+}
+
 /* Responsive adjustment for mobile screens */
 @media (max-width: 768px) {
     .hero {
@@ -270,5 +285,10 @@ footer {
     }
     .hero-content h1 {
         font-size: 2.5rem;
+    }
+    #contact .sub-heading {
+        word-spacing: normal; /* Allows them to sit side-by-side on mobile devices */
+        text-align: center;
+        margin-bottom: 30px;
     }
 }
