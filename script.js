@@ -1,9 +1,24 @@
 document.getElementById('tourForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Simulate lead capture alert
-    alert('Thank you for your interest in 1030 Elmwood! Our leasing office will connect with you via email shortly.');
+    const form = this;
+    const data = new FormData(form);
     
-    // Reset form field values
-    this.reset();
+    // Sends form data asynchronously to the specified endpoint
+    fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            alert('Thank you for your message! Our leasing office will connect with you via email shortly.');
+            form.reset();
+        } else {
+            alert('Oops! There was a problem submitting your form. Please try again.');
+        }
+    }).catch(error => {
+        alert('Oops! There was a connectivity issue submitting your form.');
+    });
 });
