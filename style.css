@@ -85,6 +85,7 @@ header {
     color: var(--primary);
     text-decoration: none;
     letter-spacing: 1px;
+    white-space: nowrap; /* Prevents logo from wrapping into two lines */
 }
 
 .nav-links {
@@ -270,24 +271,51 @@ footer {
 
 #contact .sub-heading {
     font-family: var(--font-serif);
-    font-size: clamp(2.5rem, 6vw, 4.5rem); /* Fluid scaling based on window width */
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     line-height: 1.1;
     font-weight: 400;
     letter-spacing: 4px;
-    word-spacing: 100vw; /* Forces "CONTACT" and "US" to stack elegantly on separate lines */
+    word-spacing: 100vw;
     margin-bottom: 0;
 }
 
-/* Responsive adjustment for mobile screens */
+/* Responsive adjustments for mobile screens */
 @media (max-width: 768px) {
+    /* Stack layout cleanly vertically */
+    .nav-container {
+        flex-direction: column;
+        padding: 10px 15px;
+        gap: 8px;
+    }
+
+    .logo {
+        font-size: 1.2rem; /* Scaled down logo slightly */
+        letter-spacing: 2px;
+    }
+
+    /* Distribute links in a clean row underneath */
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-links li a {
+        margin: 0 8px; /* Snug spacing to ensure everything fits horizontally */
+        font-size: 0.8rem;
+    }
+
+    /* Ensure the hero copy pushes down past the taller stacked header */
     .hero {
         height: 80vh;
+        padding-top: 100px;
     }
+    
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
+
     #contact .sub-heading {
-        word-spacing: normal; /* Allows them to sit side-by-side on mobile devices */
+        word-spacing: normal;
         text-align: center;
         margin-bottom: 30px;
     }
