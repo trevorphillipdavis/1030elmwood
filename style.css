@@ -60,6 +60,15 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* About Typography Spacing Fix */
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
 /* Navigation */
 header {
     background: rgba(255, 255, 255, 0.95);
@@ -138,7 +147,7 @@ header {
     width: 100%;
 }
 
-/* Hero Header Section - Reverted to original unadjusted image settings */
+/* Hero Header Section */
 .hero {
     height: 90vh;
     background: url('Front_Header.jpg') no-repeat center center/cover;
