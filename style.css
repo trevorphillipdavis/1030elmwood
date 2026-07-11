@@ -85,7 +85,7 @@ header {
     color: var(--primary);
     text-decoration: none;
     letter-spacing: 1px;
-    white-space: nowrap; /* Prevents logo from wrapping into two lines */
+    white-space: nowrap;
 }
 
 .nav-links {
@@ -138,22 +138,33 @@ header {
     width: 100%;
 }
 
-/* Hero Header Section */
+/* Hero Header Section - Adjusted to level image tilt programmatically */
 .hero {
     height: 90vh;
-    background: url('Front_Header.jpg') no-repeat center center/cover;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding-top: 80px;
+    overflow: hidden; /* Hides image overflow from rotation */
+}
+
+/* Isolating the background image to safely rotate it without tilting the text copy */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url('Front_Header.jpg') no-repeat center center/cover;
+    transform: rotate(-0.8deg) scale(1.05); /* Rotates counter-clockwise to level out and scales up slightly to eliminate blank edge gaps */
+    z-index: -2;
 }
 
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(28, 45, 55, 0.55);
+    z-index: -1;
 }
 
 .hero-content {
@@ -281,7 +292,6 @@ footer {
 
 /* Responsive adjustments for mobile screens */
 @media (max-width: 768px) {
-    /* Stack layout cleanly vertically */
     .nav-container {
         flex-direction: column;
         padding: 10px 15px;
@@ -289,22 +299,20 @@ footer {
     }
 
     .logo {
-        font-size: 1.2rem; /* Scaled down logo slightly */
+        font-size: 1.2rem;
         letter-spacing: 2px;
     }
 
-    /* Distribute links in a clean row underneath */
     .nav-links {
         width: 100%;
         justify-content: center;
     }
 
     .nav-links li a {
-        margin: 0 8px; /* Snug spacing to ensure everything fits horizontally */
+        margin: 0 8px;
         font-size: 0.8rem;
     }
 
-    /* Ensure the hero copy pushes down past the taller stacked header */
     .hero {
         height: 80vh;
         padding-top: 100px;
